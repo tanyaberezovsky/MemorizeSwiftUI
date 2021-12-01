@@ -92,10 +92,13 @@ struct CardView: View {
     }
     
     func fontSize(_ size: CGSize) -> CGFloat {
-        return min(size.width, size.height) * fontScaleFactor
+        return min(size.width, size.height) * DravingConstants.fontScaleFactor
     }
     
-    private let fontScaleFactor: CGFloat = 0.75
+    private struct DravingConstants {
+        static let fontScaleFactor: CGFloat = 0.75
+    }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
